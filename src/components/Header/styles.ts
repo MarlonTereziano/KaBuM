@@ -99,10 +99,11 @@ export const InputContainer = styled.div`
     @media (max-width: 580px) {
         margin-left: 10%;
         input{
-            margin-top:0.8rem;
+            margin-top:-0.5rem;
             height: 1rem;
         }
         .contentSearch{
+            margin-top: -5%;
             width: 20rem;
         }
     }
