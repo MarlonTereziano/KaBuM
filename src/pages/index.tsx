@@ -1,10 +1,17 @@
-import { Header } from '../components/header';
-import { Container } from '../styles/homePage';
+import { Header } from "../components/Header";
+import { ContainerHeader, BodyContent } from "../styles/homePage";
+import { Banner } from "../components/Banner";
 
 export default function homePage() {
-    return (
-        <Container>
-            <Header />
-        </Container>
-    );
+  return (
+    <>
+      <ContainerHeader>
+        <Header />
+      </ContainerHeader>
+      <Banner/>
+      <BodyContent>
+
+      </BodyContent>
+    </>
+  );
 }

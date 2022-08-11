@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -13,9 +13,17 @@ export default createGlobalStyle`
 
   :root{
     --color-white: #fff;
-    --color-white-200: #CCCCCC;
+    --color-white-200: #D7DFEF;
     --color-black: #000;
     --color-blue: #0060B1;
+    --color-blue-200: #022448;
+    --color-orange:#F26D1E;
+    --color-orange-200:#FF6500;
+;
   }
 
-`
+body::-webkit-scrollbar {
+  width: 0; 
+}
+
+`;
