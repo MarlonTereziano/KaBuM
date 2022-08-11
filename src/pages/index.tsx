@@ -1,7 +1,6 @@
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
-import { ContainerHeader, BodyContent } from "../styles/homePage";
-
+import { ContainerHeader, BodyContent, Content } from "../styles/homePage";
 
 export default function homePage() {
   return (
@@ -9,9 +8,9 @@ export default function homePage() {
       <ContainerHeader>
         <Header />
       </ContainerHeader>
-      <Banner/>
+      <Banner />
       <BodyContent>
-
+        <Content></Content>
       </BodyContent>
     </>
   );
