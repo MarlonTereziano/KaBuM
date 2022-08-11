@@ -72,6 +72,18 @@ export const InputContainer = styled.div`
     cursor: pointer;
   }
 
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: -10rem;
+    width: 50rem;
+    color: var(--color-white);
+    background-color: transparent;
+  }
+
   @media (max-width: 1440px) {
     margin-right: 10%;
   }
@@ -95,6 +107,13 @@ export const InputContainer = styled.div`
       width: 30rem;
       margin: 0;
     }
+    p{
+      width: auto;
+      left: 0;
+      margin-left: 1%; 
+      font-size: 0.6rem;
+      margin-top: 14.5rem;
+    }
   }
   @media (max-width: 580px) {
     margin-left: 10%;
@@ -116,6 +135,12 @@ export const LoginContainer = styled.div`
   width: 15%;
   height: 50%;
 
+  .imageProfile{
+    border: 1px solid;
+    border-radius: 50%;
+    width: 2.2rem;
+  }
+
   .contentLogin {
     display: flex;
     align-items: center;
@@ -135,7 +160,19 @@ export const LoginContainer = styled.div`
     }
 
     a:hover {
+      cursor: pointer;
       text-decoration: underline;
+    }
+  }
+
+  .optionsAuth a{
+    font-weight: normal;
+    margin-left: -0.01rem;
+  }
+
+  @media (max-width: 1320px) {
+    a{
+      font-size: 11px;
     }
   }
 
@@ -163,6 +200,7 @@ export const UtilsContainer = styled.div`
 
   @media (max-width: 967px) {
     margin: 0;
+    margin-bottom: 3%;
     width: 10rem;
   }
 `;

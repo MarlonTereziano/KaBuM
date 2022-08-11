@@ -1,79 +1,86 @@
 import {
-    createContext,
-    useCallback,
-    useContext,
-    ReactNode,
-    useState,
-    useEffect,
-} from 'react';
-import { IUser } from '../interfaces/User';
+  createContext,
+  useCallback,
+  useContext,
+  ReactNode,
+  useState,
+} from "react";
+import { IUser } from "../interfaces/User";
+import { ILogin } from "../interfaces/Login";
 import api from "../services/api";
 
 interface AuthContextData {
-    signIn: (email: string) => Promise<void>;
-    user: IUser | null;
-    signOut: () => void;
+  signIn: (credentials: IUser) => Promise<void>;
+  user: IUser | null;
+  signOut: () => void;
 }
 
 interface AuthProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-const AuthProvider: React.FC<AuthProviderProps> = ({ children })  => {
-    const [user, setUser] = useState<IUser | null>(null);
+const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<ILogin | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
 
-    const signIn = useCallback(async (email: string) => {
-        const getUsers = await api.get<IUser[]>('/users');
-        const userData = getUsers.data.find((user) => user.email === email);
+  const signIn = useCallback(async (data: IUser) => {
+    setAuthLoading(true);
+    try {
+      let response = await api.put("/users/1",{
+          email: data.email,
+          password: data.password,
+          profile: data.image_profile,
+          adress: data.adress,
+          image_profile: data.image_profile,
+      });
 
-        if (!userData) throw new Error('Usuário não encontrado');
+      await localStorage.setItem("@KaBuM:user", JSON.stringify(response.data.email));
 
-        const userWithType = {
-            ...userData,
-            type: 'user',
-        };
+      setUser({
+        email: response.data.email, 
+        password: response.data.password, 
+        name: response.data.name,
+        adress: response.data.adress,
+        image_profile: response.data.image_profile,
+    });
+      setAuthLoading(false);
+    } catch (error) {
+      alert(error);
+    }
+  }, []);
 
-        localStorage.setItem('@Kabum:USER', JSON.stringify(userWithType));
-        setUser(userWithType as IUser);
-    }, []);
-
-    const signOut = useCallback(() => {
-        localStorage.removeItem('@Kabum:USER');
+  const signOut = useCallback(() => {
+    try{
+        localStorage.removeItem("@KaBuM:user");
         setUser(null);
-    }, []);
+    }catch(error){
+        alert(error);
+    }
+  }, []);
 
-    useEffect(() => {
-        const userString = localStorage.getItem('@Kabum:USER');
-        console.log(user);
-
-        if (userString && !user) {
-            setUser(JSON.parse(userString));
-        }
-    }, [user]);
-
-    return (
-        <AuthContext.Provider
-            value={{
-                signIn,
-                signOut,
-                user,
-            }}
-        >
-            {children}
-        </AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider
+      value={{
+        signIn,
+        signOut,
+        user,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 function useAuth(): AuthContextData {
-    const context = useContext(AuthContext);
+  const context = useContext(AuthContext);
 
-    if (!context) {
-        throw new Error('useAuth must be used within an AuthProvider');
-    }
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
 
-    return context;
+  return context;
 }
 
 export { AuthProvider, useAuth };
