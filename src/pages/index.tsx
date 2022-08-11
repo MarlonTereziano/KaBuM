@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
-import { ContainerHeader, BodyContent } from "../styles/homePage";
 import { Banner } from "../components/Banner";
+import { ContainerHeader, BodyContent } from "../styles/homePage";
+
 
 export default function homePage() {
   return (
