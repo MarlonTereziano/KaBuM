@@ -11,6 +11,7 @@ import { useCallback } from "react";
 
 //Next Imports
 import Image from "next/image";
+import Link from "next/link";
 
 //Assets
 import LogoKabum from "../../../public/assets/LogoKabum.svg";
@@ -45,10 +46,10 @@ export function Header() {
   }, [signIn]);
   return (
     <HeaderContainer>
-      <a className="logoNormal" href="/">
+      <a className="logoNormal">
         <Image src={LogoKabum} alt="LogoKabum" />
       </a>
-      <a className="logoMini" href="/">
+      <a className="logoMini">
         <Image src={KabumMiniLogo} alt="LogoKabum" />
       </a>
       {user ? (
@@ -102,15 +103,21 @@ export function Header() {
         )}
       </LoginContainer>
       <UtilsContainer>
-        <a target="_blank" href="https://www.kabum.com.br/faq">
-          <Image src={SacIcon} alt="SacIcon" />
-        </a>
-        <a target="_blank" href="/">
-          <Image src={FavoriteIcon} alt="FavoriteIcon" />
-        </a>
-        <a target="_blank" href="https://www.kabum.com.br/carrinho">
-          <Image src={ShopIcon} alt="ShopIcon" />
-        </a>
+        <Link href="https://www.kabum.com.br/sac">
+          <a target="_blank">
+            <Image src={SacIcon} alt="SacIcon" />
+          </a>
+        </Link>
+        <Link href="https://www.kabum.com.br/login">
+          <a target="_blank">
+            <Image src={FavoriteIcon} alt="FavoriteIcon" />
+          </a>
+        </Link>
+        <Link href="https://www.kabum.com.br/carrinho">
+          <a target="_blank">
+            <Image src={ShopIcon} alt="ShopIcon" />
+          </a>
+        </Link>
       </UtilsContainer>
     </HeaderContainer>
   );
