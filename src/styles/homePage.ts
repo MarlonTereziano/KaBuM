@@ -18,7 +18,7 @@ export const Content = styled.div`
   display: flex;
   max-width: 1440px;
   position: relative;
-  background-color: var(--color-white);
+  background-color: var(--color-white-300);
   margin-top: -10vw;
   width: 100vw;
   height: 40rem;

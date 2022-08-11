@@ -1,5 +1,10 @@
+//Next Import
 import Image from "next/image";
+
+//Images Import
 import BodyBanner from "../../../public/assets/BodyBanner.svg";
+
+//Styles Import
 import {ContainerImageBanner} from './styles'
 
 export function Banner() {

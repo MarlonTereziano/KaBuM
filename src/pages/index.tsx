@@ -1,5 +1,9 @@
+//Components Import
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
+import { HeaderPromotion} from "../components/HeaderPromotion";
+
+//Styles Imports
 import { ContainerHeader, BodyContent, Content } from "../styles/homePage";
 
 export default function homePage() {
@@ -10,7 +14,9 @@ export default function homePage() {
       </ContainerHeader>
       <Banner />
       <BodyContent>
-        <Content></Content>
+        <Content>
+          <HeaderPromotion />
+        </Content>
       </BodyContent>
     </>
   );

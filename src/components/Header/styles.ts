@@ -13,6 +13,10 @@ export const HeaderContainer = styled.header`
   padding-left: 3rem;
   padding-right: 3rem;
 
+  a:hover{
+    cursor: pointer;
+  }
+
   @media (max-width: 1279px) {
     .logoNormal {
       display: none;
