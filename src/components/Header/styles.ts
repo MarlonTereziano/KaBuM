@@ -72,7 +72,7 @@ export const InputContainer = styled.div`
     cursor: pointer;
   }
 
-  p{
+  p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,10 +107,10 @@ export const InputContainer = styled.div`
       width: 30rem;
       margin: 0;
     }
-    p{
+    p {
       width: auto;
       left: 0;
-      margin-left: 1%; 
+      margin-left: 1%;
       font-size: 0.6rem;
       margin-top: 14.5rem;
     }
@@ -135,7 +135,7 @@ export const LoginContainer = styled.div`
   width: 15%;
   height: 50%;
 
-  .imageProfile{
+  .imageProfile {
     border: 1px solid;
     border-radius: 50%;
     width: 2.2rem;
@@ -165,13 +165,13 @@ export const LoginContainer = styled.div`
     }
   }
 
-  .optionsAuth a{
+  .optionsAuth a {
     font-weight: normal;
     margin-left: -0.01rem;
   }
 
   @media (max-width: 1320px) {
-    a{
+    a {
       font-size: 11px;
     }
   }
