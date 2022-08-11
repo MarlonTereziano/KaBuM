@@ -17,6 +17,7 @@ export default createGlobalStyle`
     --color-black: #000;
     --color-blue: #0060B1;
     --color-blue-200: #022145;
+    --color-blue-300: #347BBE;
     --color-orange:#F26D1E;
     --color-orange-200:#FF6500;
 ;

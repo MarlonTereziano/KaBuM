@@ -136,7 +136,7 @@ export const LoginContainer = styled.div`
   height: 50%;
 
   .imageProfile {
-    border: 1px solid;
+    border: 1px solid var(--color-blue-300);
     border-radius: 50%;
     width: 2.2rem;
   }
