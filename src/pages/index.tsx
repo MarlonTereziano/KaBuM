@@ -3,10 +3,14 @@ import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { HeaderPromotion} from "../components/HeaderPromotion";
 
+//Hooks
+import { useAuth } from "../hooks/auth";
+
 //Styles Imports
-import { ContainerHeader, BodyContent, Content } from "../styles/homePage";
+import { ContainerHeader, BodyContent, Content, ContentCards } from "../styles/homePage";
 
 export default function homePage() {
+  const user = useAuth();
   return (
     <>
       <ContainerHeader>
@@ -16,6 +20,9 @@ export default function homePage() {
       <BodyContent>
         <Content>
           <HeaderPromotion />
+          <ContentCards>
+            <h1>teste</h1>
+          </ContentCards>
         </Content>
       </BodyContent>
     </>
