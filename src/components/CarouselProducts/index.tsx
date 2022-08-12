@@ -1,5 +1,5 @@
 import api from "../../services/api";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import { ProductsContainer, Item } from "./styles";
 
@@ -12,25 +12,31 @@ export function CarouselProducts() {
   ];
 
   const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7]);
+  
+  useEffect(() => {
+    getProducts();
+  }, []);
 
-  // console.log("dentro");
-  // const [products, setProducts] = useState([]);
-  // const getProducts = useCallback(async () => {
+  console.log("dentro");
+  const [products, setProducts] = useState([]);
+  const getProducts = useCallback(async () => {
+    console.log("fora");
 
-  //     console.log("dentro");
-
-  //   const response = await api.get("products");
-  //   console.log(response.data[0].description);
-  //   setProducts(response.data[0].description);
-  // }, []);
-  // console.log(products);
+    const response = await api.get("products");
+    console.log(response.data);
+    setProducts(response.data);
+  }, []);
+  console.log(products[1], "ontem");
 
   return (
     <ProductsContainer>
       <div className="carousel-wrapper">
         <Carousel isRTL={false} breakPoints={breakPoints}>
           {items.map((item) => (
-            <Item key={item}>{item}</Item>
+            <Item key={item}>
+              {item}
+              <h1>s</h1>
+            </Item>
           ))}
         </Carousel>
       </div>
