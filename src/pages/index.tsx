@@ -5,7 +5,7 @@ import { useCallback } from "react";
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { HeaderPromotion } from "../components/HeaderPromotion";
-import { Products } from "../components/Products";
+import { CarouselProducts } from "../components/CarouselProducts";
 
 //Styles Imports
 import {
@@ -29,7 +29,7 @@ export default function homePage() {
           <HeaderPromotion />
           <ContentCards>
             {/* <Carrousel> */}
-              <Products/>
+              <CarouselProducts/>
             {/* </Carrousel> */}
           </ContentCards>
         </Content>

@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import { ProductsContainer, Item } from "./styles";
 
-export function Products() {
+export function CarouselProducts() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2, itemsToScroll: 2 },
@@ -12,7 +12,6 @@ export function Products() {
   ];
 
   const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7]);
-
 
   // console.log("dentro");
   // const [products, setProducts] = useState([]);
@@ -27,14 +26,12 @@ export function Products() {
   // console.log(products);
 
   return (
-    
     <ProductsContainer>
-      <hr className="separator" />
       <div className="carousel-wrapper">
         <Carousel isRTL={false} breakPoints={breakPoints}>
-            {items.map((item) => (
-                <Item key={item}>{item}</Item>
-            ))}
+          {items.map((item) => (
+            <Item key={item}>{item}</Item>
+          ))}
         </Carousel>
       </div>
     </ProductsContainer>

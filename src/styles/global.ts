@@ -15,13 +15,16 @@ export default createGlobalStyle`
     --color-white: #fff;
     --color-white-200: #D7DFEF;
     --color-white-300: #FAFAFB;
+
     --color-black: #000;
+    --color-black-200: #565C69;
+
     --color-blue: #0060B1;
     --color-blue-200: #022145;
     --color-blue-300: #347BBE;
+
     --color-orange:#F26D1E;
     --color-orange-200:#FF6500;
-;
   }
 
 body::-webkit-scrollbar {
