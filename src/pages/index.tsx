@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { HeaderPromotion } from "../components/HeaderPromotion";
 import { CarouselProducts } from "../components/CarouselProducts";
+import { BottomContent } from "../components/BottomContent";
 
 //Styles Imports
 import {
@@ -28,9 +29,8 @@ export default function homePage() {
         <Content>
           <HeaderPromotion />
           <ContentCards>
-            {/* <Carrousel> */}
-              <CarouselProducts/>
-            {/* </Carrousel> */}
+            <CarouselProducts/>
+            <BottomContent/>
           </ContentCards>
         </Content>
       </BodyContent>

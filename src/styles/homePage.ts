@@ -12,6 +12,9 @@ export const BodyContent = styled.div`
   justify-content: center;
   height: 60.438rem;
   background-color: var(--color-blue-200);
+  @media (max-width: 967px) {
+    background: none;
+  }
 `;
 
 export const Content = styled.div`
@@ -24,6 +27,10 @@ export const Content = styled.div`
   height: 55.813rem;
   z-index: 3;
 
+  @media (max-width: 967px) {
+    height: 20rem;
+  }
+
   @media (min-width: 2200px) {
     margin-top: -6vw;
   }
@@ -33,5 +40,4 @@ export const ContentCards = styled.div`
   position: relative;
   width: 100%;
   height: 30.688rem;
-
-`
+`;

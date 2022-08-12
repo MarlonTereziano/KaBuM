@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
   padding-left: 3rem;
   padding-right: 3rem;
 
-  a:hover{
+  a:hover {
     cursor: pointer;
   }
 
@@ -28,10 +28,13 @@ export const HeaderContainer = styled.header`
     }
   }
   @media (max-width: 967px) {
-    flex-direction: column;
+    height: 4rem;
+    .logoMini{
+      position: absolute;
+      margin-left: 2%;
+      left: 0;
+    }
     align-items: center;
-    justify-content: center;
-    height: auto;
   }
 `;
 
@@ -51,6 +54,7 @@ export const InputContainer = styled.div`
     width: 25rem;
     height: 1.7rem;
     z-index: 1;
+    margin-top: -0.3rem;
     background-color: transparent;
   }
 
@@ -64,12 +68,17 @@ export const InputContainer = styled.div`
 
   button {
     position: relative;
-    margin-left: -8%;
-    width: 8%;
+    margin-left: -10%;
+    width: 10%;
     height: 3rem;
     z-index: 2;
     background-color: transparent;
     border: none;
+
+    @media (min-width: 1520px) {
+      width: 4rem;
+      margin-left: -4rem;
+    }
   }
 
   button:hover {
@@ -105,32 +114,39 @@ export const InputContainer = styled.div`
     }
   }
   @media (max-width: 967px) {
-    margin-left: -10%;
-    width: 20rem;
-    .contentSearch {
-      width: 30rem;
-      margin: 0;
+    position: absolute;
+    margin-left: 1rem;
+    input {
+      margin-top: -0.4rem;
+      height: 1.2rem;
     }
-    p {
-      width: auto;
-      left: 0;
-      margin-left: 1%;
-      font-size: 0.6rem;
-      margin-top: 14.5rem;
+    .contentSearch {
+      width: 32rem;
     }
   }
-  @media (max-width: 580px) {
-    margin-left: 10%;
+  @media (max-width: 620px) {
+    position: absolute;
+    width: 23rem;
+    height: 2.3rem;
+    margin: 0;
+    padding-left: 1rem;
     input {
-      margin-top: -0.5rem;
-      height: 1rem;
+      padding-left: 0.5rem;
+      margin: 0;
+      background-color: white;
+      border-radius: 2px;
+      width: 80%;
+      height: 100%;
     }
     .contentSearch {
-      margin-top: -5%;
-      width: 20rem;
+      display: none;
     }
+  }
+  @media (max-width: 420px) {
+    width: 16rem;
   }
 `;
+
 export const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -185,8 +201,7 @@ export const LoginContainer = styled.div`
     margin-right: -20%;
   }
   @media (max-width: 967px) {
-    width: 15rem;
-    margin-right: 0;
+    display: none;
   }
 `;
 
@@ -203,8 +218,15 @@ export const UtilsContainer = styled.div`
   }
 
   @media (max-width: 967px) {
-    margin: 0;
-    margin-bottom: 3%;
-    width: 10rem;
+    .favorite {
+      display: none;
+    }
+    .sac {
+      display: none;
+    }
+    .shop{
+      right: 1rem;
+      position: absolute;
+    }
   }
 `;

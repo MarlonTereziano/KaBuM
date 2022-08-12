@@ -3,10 +3,15 @@ import styled from "styled-components";
 export const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 31.688rem;
   margin-top: 3rem;
   padding: 0 2rem 0 2rem;
   background-color: var(--color-white-300);
+
+  @media (max-width: 967px) {
+    padding: 0;
+    height: 20rem;
+  }
 
   .seperator {
     width: 100%;
@@ -26,6 +31,9 @@ export const ProductsContainer = styled.div`
     border: none;
     box-shadow: none;
     color:var(--color-black-200);
+    @media (max-width: 967px) {
+    display: none;
+    }
   }
 
   .rec.rec-arrow:hover{
@@ -50,6 +58,10 @@ export const Item = styled.div`
   width: 100%;
   background-color: var(--color-white);
   color: red;
-  margin: 15px;
+  margin: 10px;
   font-size: 4em;
+
+  @media (max-width: 967px) {
+    height: 15rem;
+  }
 `;

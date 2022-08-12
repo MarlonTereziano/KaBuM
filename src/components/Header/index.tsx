@@ -104,17 +104,17 @@ export function Header() {
       </LoginContainer>
       <UtilsContainer>
         <Link href="https://www.kabum.com.br/sac">
-          <a target="_blank">
+          <a className="sac" target="_blank">
             <Image src={SacIcon} alt="SacIcon" />
           </a>
         </Link>
         <Link href="https://www.kabum.com.br/login">
-          <a target="_blank">
+          <a className="favorite"target="_blank">
             <Image src={FavoriteIcon} alt="FavoriteIcon" />
           </a>
         </Link>
         <Link href="https://www.kabum.com.br/carrinho">
-          <a target="_blank">
+          <a className="shop" target="_blank">
             <Image src={ShopIcon} alt="ShopIcon" />
           </a>
         </Link>
