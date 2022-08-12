@@ -18,6 +18,9 @@ export default createGlobalStyle`
 
     --color-black: #000;
     --color-black-200: #565C69;
+    --color-black-300: #42464D;
+    --color-black-400: #7F858D;
+    --color-black-500: #565C69;
 
     --color-blue: #0060B1;
     --color-blue-200: #022145;

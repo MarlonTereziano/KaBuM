@@ -1,7 +1,14 @@
-import api from "../../services/api";
+//React Imports
 import { useCallback, useEffect, useState } from "react";
+
+//Carousel
 import Carousel from "@itseasy21/react-elastic-carousel";
+
+//Styles Imports
 import { ProductsContainer, Item } from "./styles";
+
+//Components Import
+import { Card } from "./Items/cards";
 
 export function CarouselProducts() {
   const breakPoints = [
@@ -11,22 +18,7 @@ export function CarouselProducts() {
     { width: 1200, itemsToShow: 4 },
   ];
 
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7]);
-  
-  useEffect(() => {
-    getProducts();
-  }, []);
-
-  console.log("dentro");
-  const [products, setProducts] = useState([]);
-  const getProducts = useCallback(async () => {
-    console.log("fora");
-
-    const response = await api.get("products");
-    console.log(response.data);
-    setProducts(response.data);
-  }, []);
-  console.log(products[1], "ontem");
+  const [items, setItems] = useState([1, 2, 3, 4, 5]);
 
   return (
     <ProductsContainer>
@@ -34,8 +26,7 @@ export function CarouselProducts() {
         <Carousel isRTL={false} breakPoints={breakPoints}>
           {items.map((item) => (
             <Item key={item}>
-              {item}
-              <h1>s</h1>
+              <Card numCard={item}></Card>
             </Item>
           ))}
         </Carousel>
