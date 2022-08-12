@@ -1,16 +1,23 @@
+//React Imports
+import { useCallback } from "react";
+
 //Components Import
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
-import { HeaderPromotion} from "../components/HeaderPromotion";
-
-//Hooks
-import { useAuth } from "../hooks/auth";
+import { HeaderPromotion } from "../components/HeaderPromotion";
+import { Products } from "../components/Products";
 
 //Styles Imports
-import { ContainerHeader, BodyContent, Content, ContentCards } from "../styles/homePage";
+import {
+  ContainerHeader,
+  BodyContent,
+  Content,
+  ContentCards,
+} from "../styles/homePage";
+
 
 export default function homePage() {
-  const user = useAuth();
+
   return (
     <>
       <ContainerHeader>
@@ -21,7 +28,9 @@ export default function homePage() {
         <Content>
           <HeaderPromotion />
           <ContentCards>
-            <h1>teste</h1>
+            {/* <Carrousel> */}
+              <Products/>
+            {/* </Carrousel> */}
           </ContentCards>
         </Content>
       </BodyContent>

@@ -5,6 +5,7 @@ import Image from "next/image";
 export function HeaderPromotion() {
   return (
     <HeaderContainer>
+        
       <h1>BLACK FRIDAY</h1>
       <div className="contentCounter">
         <h2>
