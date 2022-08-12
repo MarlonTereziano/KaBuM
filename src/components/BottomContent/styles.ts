@@ -10,7 +10,8 @@ export const LastContainer = styled.div`
   padding: 3%;
 
   div:hover {
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9);
+    width: 23.8rem;
     cursor: pointer;
   }
 

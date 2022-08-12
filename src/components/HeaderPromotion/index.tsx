@@ -34,7 +34,7 @@ export function HeaderPromotion() {
   };
 
   const clearTimer = (e: any) => {
-    setTimer("00:26:39");
+    setTimer("00:46:39");
     if (Ref.current) clearInterval(Ref.current);
     const id: any = setInterval(() => {
       startTimer(e);
@@ -44,7 +44,7 @@ export function HeaderPromotion() {
 
   const getDeadTime = () => {
     let deadline = new Date();
-    deadline.setSeconds(deadline.getSeconds() + 610000);
+    deadline.setSeconds(deadline.getSeconds() + 910000);
     return deadline;
   };
 
