@@ -1,14 +1,15 @@
-import { ReactNode } from 'react';
-import {AuthProvider} from './auth';
+import { ReactNode } from "react";
+import { AuthProvider } from "./auth";
+import { ProductsProvider } from "../contexts/products";
 
 interface AppProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-    return (
-        <AuthProvider>
-        { children }
-        </AuthProvider>
-    );
+  return (
+    <AuthProvider>
+      <ProductsProvider>{children}</ProductsProvider>
+    </AuthProvider>
+  );
 };

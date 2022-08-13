@@ -25,7 +25,12 @@ import KabumMiniLogo from "../../../public/assets/KabumMiniLogo.svg";
 //Hooks
 import { useAuth } from "../../hooks/auth";
 
+//Context
+import { useProducts } from "../../contexts/products";
+
 export function Header() {
+  const { products } = useProducts();
+
   const { signIn, signOut, user } = useAuth();
 
   const handleSubmit = useCallback(async () => {
@@ -109,12 +114,15 @@ export function Header() {
           </a>
         </Link>
         <Link href="https://www.kabum.com.br/login">
-          <a className="favorite"target="_blank">
+          <a className="favorite" target="_blank">
             <Image src={FavoriteIcon} alt="FavoriteIcon" />
           </a>
         </Link>
         <Link href="https://www.kabum.com.br/carrinho">
           <a className="shop" target="_blank">
+            <span className="orangeBall">
+              <span className="numProducts">{products.length}</span>
+            </span>
             <Image src={ShopIcon} alt="ShopIcon" />
           </a>
         </Link>

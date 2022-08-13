@@ -1,5 +1,5 @@
 //React Imports
-import {useState} from 'react';
+import { useState, useCallback } from "react";
 
 //Styles
 import { Container } from "./styles";
@@ -15,6 +15,9 @@ interface Props {
   numCard: number;
 }
 
+//Context
+import { useProducts } from "../../../contexts/products";
+
 //Images comuns
 import shipping from "../../../../public/assets/shipping.svg";
 import carBuy from "../../../../public/assets/carBuy.svg";
@@ -23,22 +26,26 @@ import heartSelected from "../../../../public/assets/heartSelected.svg";
 import stars from "../../../../public/assets/Stars.svg";
 
 export function Card({ numCard }: Props) {
-    const [favorite, setFavorite] = useState(false);
-    const aux = numCard - 1;
+  const [favorite, setFavorite] = useState(false);
+  const { addProducts} = useProducts();
+  const aux = numCard - 1;
+  const handlePurchaseProduct = () => {
+    addProducts(allProducts[aux]);
+  };
   return (
     <Container>
       <div className="favorite">
         {favorite ? (
-            <span onClick={()=>setFavorite(false)}>
-                <Image src={heartSelected} alt="heartSelected" />
-            </span>
-        ):( 
-            <span onClick={()=>setFavorite(true)}>
+          <span onClick={() => setFavorite(false)}>
+            <Image src={heartSelected} alt="heartSelected" />
+          </span>
+        ) : (
+          <span onClick={() => setFavorite(true)}>
             <Image src={heartEmpty} alt="heartEmpty" />
-            </span>
-        ) }
+          </span>
+        )}
         <span>
-            <Image src={stars}/>
+          <Image src={stars} />
         </span>
       </div>
       <div className="imageContainer">
@@ -65,7 +72,7 @@ export function Card({ numCard }: Props) {
           <div className="shippingEmpty"></div>
         )}
       </div>
-      <button>
+      <button onClick={handlePurchaseProduct}>
         <Image src={carBuy} />
         <p>Comprar</p>
       </button>

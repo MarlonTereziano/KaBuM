@@ -217,6 +217,25 @@ export const UtilsContainer = styled.div`
     margin: 0.5rem;
   }
 
+  .shop{
+    .orangeBall{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -0.5rem;
+      margin-left: 1rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--color-orange-200);
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      z-index: 3;
+    }
+  }
+
   @media (max-width: 967px) {
     .favorite {
       display: none;
