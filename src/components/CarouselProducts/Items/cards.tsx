@@ -19,11 +19,11 @@ interface Props {
 import { useProducts } from "../../../contexts/products";
 
 //Images comuns
-import shipping from "../../../../public/assets/shipping.svg";
-import carBuy from "../../../../public/assets/carBuy.svg";
-import heartEmpty from "../../../../public/assets/heartEmpty.svg";
-import heartSelected from "../../../../public/assets/heartSelected.svg";
-import stars from "../../../../public/assets/Stars.svg";
+import shipping from "../../../../public/assets/icons/shipping.svg";
+import carBuy from "../../../../public/assets/icons/carBuy.svg";
+import heartEmpty from "../../../../public/assets/icons/heartEmpty.svg";
+import heartSelected from "../../../../public/assets/icons/heartSelected.svg";
+import stars from "../../../../public/assets/icons/Stars.svg";
 
 export function Card({ numCard }: Props) {
   const [favorite, setFavorite] = useState(false);

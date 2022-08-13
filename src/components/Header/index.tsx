@@ -14,13 +14,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 //Assets
-import LogoKabum from "../../../public/assets/LogoKabum.svg";
-import InputStyle from "../../../public/assets/InputStyle.svg";
-import ProfileIcon from "../../../public/assets/ProfileIcon.svg";
-import SacIcon from "../../../public/assets/SacIcon.svg";
-import FavoriteIcon from "../../../public/assets/FavoriteIcon.svg";
-import ShopIcon from "../../../public/assets/ShopIcon.svg";
-import KabumMiniLogo from "../../../public/assets/KabumMiniLogo.svg";
+import LogoKabum from "../../../public/assets/logos/LogoKabum.svg";
+import InputStyle from "../../../public/assets/others/InputStyle.svg";
+import ProfileIcon from "../../../public/assets/icons/ProfileIcon.svg";
+import SacIcon from "../../../public/assets/icons/SacIcon.svg";
+import FavoriteIcon from "../../../public/assets/icons/FavoriteIcon.svg";
+import ShopIcon from "../../../public/assets/icons/ShopIcon.svg";
+import KabumMiniLogo from "../../../public/assets/logos/KabumMiniLogo.svg";
 
 //Hooks
 import { useAuth } from "../../hooks/auth";

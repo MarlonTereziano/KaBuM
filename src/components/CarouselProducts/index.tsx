@@ -1,5 +1,5 @@
 //React Imports
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 
 //Carousel
 import Carousel from "@itseasy21/react-elastic-carousel";

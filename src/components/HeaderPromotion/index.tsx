@@ -1,5 +1,5 @@
 import { HeaderContainer } from "./styles";
-import Watch from "../../../public/assets/Watch.svg";
+import Watch from "../../../public/assets/icons/Watch.svg";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 
@@ -60,7 +60,7 @@ export function HeaderPromotion() {
         <span className="watch">
           <Image src={Watch} alt="WatchImg" />
         </span>
-        <h1>0D {timer}</h1>
+        <h1>0 D {timer}</h1>
       </div>
     </HeaderContainer>
   );

@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 //Images Import
-import BodyBanner from "../../../public/assets/BodyBanner.svg";
+import BodyBanner from "../../../public/assets/others/BodyBanner.svg";
 
 //Styles Import
 import {ContainerImageBanner} from './styles'

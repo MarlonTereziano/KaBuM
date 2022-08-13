@@ -5,9 +5,9 @@ import { LastContainer } from "./styles";
 import Image from 'next/image';
 
 //Images Imports
-import core from "../../../public/assets/core.svg";
-import prime from '../../../public/assets/prime.svg';
-import razer from '../../../public/assets/razer.svg';
+import core from "../../../public/assets/others/core.svg";
+import prime from '../../../public/assets/others/prime.svg';
+import razer from '../../../public/assets/others/razer.svg';
 
 export function BottomContent() {
   return (
