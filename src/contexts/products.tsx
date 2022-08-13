@@ -27,7 +27,6 @@ const ProductsProvider: React.FC<ProductsProviderProps> = ({ children }) => {
   const addProducts = useCallback(
     async (data: IProducts) => {
       setProducts([...products, data]);
-      console.log(products.length);
     },
     [products, setProducts]
   );
