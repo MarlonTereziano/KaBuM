@@ -40,6 +40,9 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
     }
+    span:hover{
+        cursor: pointer;
+    }
   }
 
   .imageContainer {
