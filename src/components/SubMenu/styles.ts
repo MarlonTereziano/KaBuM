@@ -19,6 +19,7 @@ export const Container = styled.div`
 
   h1:hover {
     cursor: pointer;
+    filter: brightness(0.85);
   }
 
   .department {
