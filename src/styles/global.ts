@@ -28,6 +28,8 @@ export default createGlobalStyle`
 
     --color-orange:#F26D1E;
     --color-orange-200:#FF6500;
+    --color-orange-300:#E35214;
+    --color-orange-400:#FF8F49;
   }
 
 body::-webkit-scrollbar {

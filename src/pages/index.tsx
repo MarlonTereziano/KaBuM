@@ -4,6 +4,7 @@ import { Banner } from "../components/Banner";
 import { HeaderPromotion } from "../components/HeaderPromotion";
 import { CarouselProducts } from "../components/CarouselProducts";
 import { BottomContent } from "../components/BottomContent";
+import { DropdownMenu} from '../components/DropdownMenu'
 
 //Styles Imports
 import {
@@ -19,6 +20,7 @@ export default function homePage() {
       <ContainerHeader>
         <Header />
       </ContainerHeader>
+      <DropdownMenu/>
       <Banner />
       <BodyContent>
         <Content>

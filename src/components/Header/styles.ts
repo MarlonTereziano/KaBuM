@@ -91,8 +91,7 @@ export const InputContainer = styled.div`
     justify-content: center;
     position: absolute;
     margin-top: 4rem;
-    margin-left: -10rem;
-    width: 50rem;
+    width: auto;
     color: var(--color-white);
     background-color: transparent;
   }
@@ -122,6 +121,12 @@ export const InputContainer = styled.div`
     }
     .contentSearch {
       width: 32rem;
+    }
+    p{
+      margin-left: 0;
+      width: auto;
+      font-size: 10px;
+      margin-top: 3rem;
     }
   }
   @media (max-width: 620px) {
