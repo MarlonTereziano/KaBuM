@@ -10,7 +10,7 @@ This project aims to replicate a website from the company <strong>KaBuM!</strong
 
 Test the hosted project! 👉 https://kabum-omega.vercel.app/
 
-# How I can run?
+# How can I run?
 
 <details>
   <summary>Prerequisites</summary>
@@ -80,6 +80,8 @@ The app should now be up and running at http://localhost:3000 🚀
 The API was created with <strong>MockAPI</strong>, as requested by the project. To perform all necessary requests, the pattern REST request was used. The requests in development for testing were made with <strong>Insomnia</strong>, and in the Front-end they were made with <strong>Axios</strong>, when necessary.
 
 ![image](https://user-images.githubusercontent.com/80834228/184504948-d77ffd72-9110-4717-bb0b-20ea145c1ebd.png)
+![image](https://user-images.githubusercontent.com/80834228/184505749-547c6679-3fda-400c-8068-108ff878af0b.png)
+
 
 
 ## GIT
