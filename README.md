@@ -20,7 +20,7 @@ git clone https://github.com/MarlonTereziano/KaBuM.git
 Once downloaded, open the terminal in the project directory, and install dependencies with:
 
 ```
-yarn install
+yarn
 ```
 
 Then start the example app with:
