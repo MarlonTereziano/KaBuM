@@ -48,6 +48,9 @@ export const ProductsContainer = styled.div`
   .sc-iBkjds.kdCslO.rec.rec-pagination {
     display: none;
   }
+  .sc-iBkjds.hHSNMm.rec.rec-pagination{
+    display: none;
+  }
 `;
 
 export const Item = styled.div`
