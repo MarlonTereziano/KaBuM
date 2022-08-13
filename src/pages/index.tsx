@@ -1,6 +1,3 @@
-//React Imports
-import { useCallback } from "react";
-
 //Components Import
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
@@ -16,9 +13,7 @@ import {
   ContentCards,
 } from "../styles/homePage";
 
-
 export default function homePage() {
-
   return (
     <>
       <ContainerHeader>
@@ -29,8 +24,8 @@ export default function homePage() {
         <Content>
           <HeaderPromotion />
           <ContentCards>
-            <CarouselProducts/>
-            <BottomContent/>
+            <CarouselProducts />
+            <BottomContent />
           </ContentCards>
         </Content>
       </BodyContent>
