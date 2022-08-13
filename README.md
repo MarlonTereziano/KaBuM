@@ -79,6 +79,9 @@ The app should now be up and running at http://localhost:3000 🚀
 
 The API was created with <strong>MockAPI</strong>, as requested by the project. To perform all necessary requests, the pattern REST request was used. The requests in development for testing were made with <strong>Insomnia</strong>, and in the Front-end they were made with <strong>Axios</strong>, when necessary.
 
+![image](https://user-images.githubusercontent.com/80834228/184504948-d77ffd72-9110-4717-bb0b-20ea145c1ebd.png)
+
+
 ## GIT
 
 To perform the commits, the convention "Conventional Commits Pattern" was used
