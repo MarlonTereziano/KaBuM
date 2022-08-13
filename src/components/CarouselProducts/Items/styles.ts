@@ -25,23 +25,23 @@ export const Container = styled.div`
     text-transform: uppercase;
   }
 
-  .favorite{
+  .favorite {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    a{
-        display: flex;
-        align-items: center;
+    a {
+      display: flex;
+      align-items: center;
     }
-    span{
-        display: flex;
-        align-items: center;
+    span {
+      display: flex;
+      align-items: center;
     }
-    span:hover{
-        cursor: pointer;
+    span:hover {
+      cursor: pointer;
     }
   }
 

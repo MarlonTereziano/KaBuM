@@ -4,7 +4,7 @@ import { Banner } from "../components/Banner";
 import { HeaderPromotion } from "../components/HeaderPromotion";
 import { CarouselProducts } from "../components/CarouselProducts";
 import { BottomContent } from "../components/BottomContent";
-import { DropdownMenu} from '../components/DropdownMenu'
+import { SubMenu } from "../components/SubMenu";
 
 //Styles Imports
 import {
@@ -20,7 +20,7 @@ export default function homePage() {
       <ContainerHeader>
         <Header />
       </ContainerHeader>
-      <DropdownMenu/>
+      <SubMenu />
       <Banner />
       <BodyContent>
         <Content>

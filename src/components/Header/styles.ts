@@ -29,7 +29,7 @@ export const HeaderContainer = styled.header`
   }
   @media (max-width: 967px) {
     height: 4rem;
-    .logoMini{
+    .logoMini {
       position: absolute;
       margin-left: 2%;
       left: 0;
@@ -122,7 +122,7 @@ export const InputContainer = styled.div`
     .contentSearch {
       width: 32rem;
     }
-    p{
+    p {
       margin-left: 0;
       width: auto;
       font-size: 10px;
@@ -222,8 +222,8 @@ export const UtilsContainer = styled.div`
     margin: 0.5rem;
   }
 
-  .shop{
-    .orangeBall{
+  .shop {
+    .orangeBall {
       position: absolute;
       display: flex;
       justify-content: center;
@@ -248,7 +248,7 @@ export const UtilsContainer = styled.div`
     .sac {
       display: none;
     }
-    .shop{
+    .shop {
       right: 1rem;
       position: absolute;
     }

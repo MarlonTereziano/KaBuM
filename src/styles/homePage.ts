@@ -31,7 +31,7 @@ export const Content = styled.div`
     height: 20rem;
     margin-top: -10rem;
   }
-  
+
   @media (max-width: 750px) {
     height: 20rem;
     margin-top: -4rem;

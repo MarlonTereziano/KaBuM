@@ -2,12 +2,12 @@
 import { LastContainer } from "./styles";
 
 //Next Imports
-import Image from 'next/image';
+import Image from "next/image";
 
 //Images Imports
 import core from "../../../public/assets/others/core.svg";
-import prime from '../../../public/assets/others/prime.svg';
-import razer from '../../../public/assets/others/razer.svg';
+import prime from "../../../public/assets/others/prime.svg";
+import razer from "../../../public/assets/others/razer.svg";
 
 export function BottomContent() {
   return (

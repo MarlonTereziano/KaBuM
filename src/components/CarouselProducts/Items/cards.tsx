@@ -27,7 +27,7 @@ import stars from "../../../../public/assets/icons/Stars.svg";
 
 export function Card({ numCard }: Props) {
   const [favorite, setFavorite] = useState(false);
-  const { addProducts} = useProducts();
+  const { addProducts } = useProducts();
   const aux = numCard - 1;
   const handlePurchaseProduct = () => {
     addProducts(allProducts[aux]);

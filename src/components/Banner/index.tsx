@@ -5,12 +5,12 @@ import Image from "next/image";
 import BodyBanner from "../../../public/assets/others/BodyBanner.svg";
 
 //Styles Import
-import {ContainerImageBanner} from './styles'
+import { ContainerImageBanner } from "./styles";
 
 export function Banner() {
   return (
     <ContainerImageBanner>
-      <Image src={BodyBanner} alt="banner"/>
+      <Image src={BodyBanner} alt="banner" />
     </ContainerImageBanner>
   );
 }
